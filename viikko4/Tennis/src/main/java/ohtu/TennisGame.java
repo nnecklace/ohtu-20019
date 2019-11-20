@@ -32,12 +32,12 @@ public class TennisGame {
 
     private String advantageOrWinState() {
         int point = Math.abs(player1Score - player2Score);
-        boolean player1Won = player1Score > player2Score;
+        String winner = player1Score > player2Score ? player1Name : player2Name;
 
         if (point >= 2) {
-            return "Win for " + (player1Won ? player1Name : player2Name);
+            return "Win for " + winner;
         } else {
-            return "Advantage " + (player1Won ? player1Name : player2Name);
+            return "Advantage " + winner;
         }
     }
 
